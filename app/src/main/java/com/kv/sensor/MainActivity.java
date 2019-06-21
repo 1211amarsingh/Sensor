@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             int x = (int) event.values[0];
+            int y = (int) event.values[1];
             if (x > 0) {
                 Log.d("Accelerometer", "Left " + x);
                 imageView.setPadding(x, 0, -x, 0);
@@ -101,6 +102,18 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 Log.d("Accelerometer", "Right " + x);
                 imageView.setPadding(x, 0, Math.abs(x), 0);
             }
+            
+//             if (isFirst) {  for pendulam
+//                 if (x == 0 && y < -8 || y == 9) {
+//                if (y < -5 || y > 7) 
+//                         isFirst = false;
+//                 }
+
+//             }
+            
+            
+            
+            
         }
     }
 
